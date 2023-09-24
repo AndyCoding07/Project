@@ -1,0 +1,64 @@
+<!-- Loading static files -->
+{% load static %}  
+<html>
+
+<head>
+    <style>
+        * {
+            margin: 0%;
+            padding: 0%;
+        }
+
+        body {
+            background: rgb(225, 13, 122);
+        }
+
+        div {
+            background-image: url("{% static 'DiabetesPredection\images\home.webp'%}");
+            background-repeat: no-repeat;
+            background-size: cover;
+
+            top: 50%;
+            left: 50%;
+            position: absolute;
+            transform: translate(-50%, -50%);
+            padding: 15%;
+            border-radius: 20px;
+            display: block;
+        }
+
+        div h1 {
+            width: 500px;
+            margin-bottom: 100;
+        }
+
+        input[type='submit'] {
+            padding-left: 100px;
+            padding-right: 100px;
+            padding-top: 15px;
+            padding-bottom: 15px;
+            margin-top: 20px;
+            border-radius: 10px;
+            background: rgba(156, 156, 156, 0.5);
+            font-size: 20px;
+        }
+
+        input[type='submit']:hover {
+
+            background: rgba(255, 255, 255, 0.5);
+        }
+    </style>
+</head>
+
+<body>
+    <div align='center'>
+        <h1>DIABETES PREDECTION SYSTEM</h1>
+
+        <form action="predictpage">
+            <input type="submit" value="Let's Start">
+        </form>
+
+    </div>
+</body>
+
+</html>
